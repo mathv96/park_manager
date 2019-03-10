@@ -34,3 +34,5 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+go_park/nbproject/
+build.xml
