@@ -1,6 +1,7 @@
-package dao;
+package core.implement.dao;
 
-import model.Client;
+import core.util.ConnectionFactory;
+import model.dominio.implement.Client;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;

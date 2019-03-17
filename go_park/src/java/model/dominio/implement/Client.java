@@ -1,8 +1,8 @@
-package model;
+package model.dominio.implement;
 
+import model.dominio.EntidadeDominio;
 
-public class Client {
-    private int id_client;
+public class Client extends EntidadeDominio{
     private String name_client;
     private String cpf_client;
     private String email_client;
@@ -10,14 +10,6 @@ public class Client {
     private String sexo_client;
     private String tel_client;
     private String cel_client;
-
-    public int getId_client() {
-        return id_client;
-    }
-
-    public void setId_client(int id_client) {
-        this.id_client = id_client;
-    }
 
     public String getName_client() {
         return name_client;
