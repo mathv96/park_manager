@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <display-name>GoPark</display-name>
+  <welcome-file-list>
+    <welcome-file>home.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <description></description>
+    <display-name>Servlet</display-name>
+    <servlet-name>Servlet</servlet-name>
+    <servlet-class>web.servlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Servlet</servlet-name>
+    <url-pattern>/CadastroPage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Servlet</servlet-name>
+    <url-pattern>/CadastrarClient</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Servlet</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Servlet</servlet-name>
+    <url-pattern>/AlterarCLient</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Servlet</servlet-name>
+    <url-pattern>/ListarClient</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>Servlet</servlet-name>
+    <url-pattern>/InativarClient</url-pattern>
+  </servlet-mapping>
+</web-app>

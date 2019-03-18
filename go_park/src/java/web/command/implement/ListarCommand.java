@@ -8,14 +8,16 @@ package web.command.implement;
 import model.app.implement.Resultado;
 import model.dominio.EntidadeDominio;
 import web.command.ICommand;
+
 /**
  *
  * @author matheus96
  */
-public class InsertCommand implements ICommand{
+public class ListarCommand implements ICommand{
 
     @Override
     public Resultado execute(EntidadeDominio entidade) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
 }

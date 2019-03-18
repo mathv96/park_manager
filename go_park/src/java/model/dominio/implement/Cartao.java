@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package web.vh.vhs;
+package model.dominio.implement;
 
 /**
  *
  * @author matheus96
  */
-public class Client {
+public class Cartao {
     
 }
