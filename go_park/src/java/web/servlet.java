@@ -46,10 +46,10 @@ public class servlet extends HttpServlet{
         String uri = req.getRequestURI();
         
         if ("/go_park/CadastroPage".equals(uri)){
-            req.getRequestDispatcher("cadastrar_cliente.jsp");
+            req.getRequestDispatcher("cadastrar_cliente.jsp").forward(req, resp);
         }
         else{
-            req.getRequestDispatcher("cadastrar_cliente.jsp");
+            req.getRequestDispatcher("home.html").forward(req, resp);   
         }
     }
     
