@@ -6,12 +6,15 @@
 package web.vh.implement;
 
 import java.io.IOException;
+import java.sql.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.app.implement.Resultado;
 import model.dominio.EntidadeDominio;
 import model.dominio.implement.Client;
+import model.dominio.implement.Plano;
+import model.dominio.implement.Veiculo;
 import web.vh.IVh;
 
 /**
@@ -24,15 +27,16 @@ public class ClientVh implements IVh{
     public EntidadeDominio getEntidade(HttpServletRequest request) {
         
         Client client = new Client();
+
         
-        client.setName(request.getParameter("name"));
+        client.setNome(request.getParameter("nome"));
         client.setCpf(request.getParameter("cpf"));
         client.setEmail(request.getParameter("email"));
-        client.setDast_nasc(null);
+        client.setDate_nasc(Date.valueOf(request.getParameter("date")));
         client.setSexo(request.getParameter("sexo"));
         client.setTel(request.getParameter("tel"));
         client.setCel(request.getParameter("cel"));
-        
+         
         String id = request.getParameter("id");
         
         if ( id != null && !id.trim().equals("")) {
