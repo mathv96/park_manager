@@ -1,30 +1,34 @@
 package model.dominio.implement;
 
+import java.sql.Date;
 import model.dominio.EntidadeDominio;
 
 public class Client extends EntidadeDominio{
-    private String name;
+    private String nome;
     private String cpf;
     private String email;
     private String sexo;
     private String tel;
     private String cel;
-    private String dast_nasc;
+    private Date date_nasc;
+    private Endereco endereco;
+    private Plano plano;
+    private Veiculo veiculo;
 
-    public String getDast_nasc() {
-        return dast_nasc;
+    public Date getDate_nasc() {
+        return date_nasc;
     }
 
-    public void setDast_nasc(String dast_nasc) {
-        this.dast_nasc = dast_nasc;
+    public void setDate_nasc(Date date_nasc) {
+        this.date_nasc = date_nasc;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getCpf() {
@@ -65,6 +69,30 @@ public class Client extends EntidadeDominio{
 
     public void setCel(String cel) {
         this.cel = cel;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public Plano getPlano() {
+        return plano;
+    }
+
+    public void setPlano(Plano plano) {
+        this.plano = plano;
+    }
+
+    public Veiculo getVeiculo() {
+        return veiculo;
+    }
+
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
     }
 
    

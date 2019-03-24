@@ -5,10 +5,13 @@
  */
 package model.dominio.implement;
 
+import model.dominio.EntidadeDominio;
+
 /**
  *
  * @author matheus96
  */
-public class Plano {
+public class Plano extends EntidadeDominio{
+    private String nome;
     
 }
