@@ -19,8 +19,8 @@
                 <input type="hidden" name="opcao" value="CADASTRAR" />
               </div>
               <div>
-                <label for="nome">Name:</label>
-                <input type="text" name="name"><br>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome"><br>
               </div>
               <div>
                 <label for="nome">CPF:</label>
