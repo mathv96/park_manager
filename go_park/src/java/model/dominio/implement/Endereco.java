@@ -12,6 +12,8 @@ import model.dominio.EntidadeDominio;
  */
 public class Endereco extends EntidadeDominio{
     private String nome;
+    private String rua;
+    private String bairro;
     private Integer numero_casa;
     private String cep;
     private String complemento;
@@ -24,6 +26,22 @@ public class Endereco extends EntidadeDominio{
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
     }
 
     public Integer getNumero_casa() {

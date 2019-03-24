@@ -26,6 +26,8 @@ public class EnderecoVh implements IVh{
         Endereco endereco = new Endereco();
         
         endereco.setNome(request.getParameter("nome_endereco"));
+        endereco.setRua(request.getParameter("rua"));
+        endereco.setBairro(request.getParameter("bairro"));
         endereco.setCep(request.getParameter("cep"));
         endereco.setNumero_casa(Integer.parseInt(request.getParameter("numero_casa")));
         endereco.setComplemento(request.getParameter("complemento"));
