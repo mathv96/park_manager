@@ -10,7 +10,7 @@ import model.IEntidade;
  *
  * @author matheus96
  */
-public class EntidadeDominio implements IEntidade{
+public abstract class EntidadeDominio implements IEntidade{
     private Integer id;
 
     public Integer getId() {

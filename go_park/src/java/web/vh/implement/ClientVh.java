@@ -12,7 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.app.implement.Resultado;
 import model.dominio.EntidadeDominio;
+import model.dominio.implement.Cidade;
 import model.dominio.implement.Client;
+import model.dominio.implement.Endereco;
+import model.dominio.implement.Estado;
 import model.dominio.implement.Plano;
 import model.dominio.implement.Veiculo;
 import web.vh.IVh;
@@ -28,11 +31,37 @@ public class ClientVh implements IVh{
         
         Client client = new Client();
 
+        EstadoVh evh = new EstadoVh();
+        EntidadeDominio estado = evh.getEntidade(request);
+        
+        CidadeVh cvh = new CidadeVh();
+        EntidadeDominio cidade = cvh.getEntidade(request, (Estado)estado);
+        
+        EnderecoVh endvh = new EnderecoVh();
+        EntidadeDominio endereco = endvh.getEntidade(request, (Cidade)cidade);
+
+        client.setEndereco((Endereco)endereco);
+        
+        EntidadeDominio plano = new Plano();
+        
+        if(request.getParameter("tipo_plano").equals("")){
+            Plano_fixoVh planovh = new Plano_fixoVh();
+            plano = planovh.getEntidade(request);
+        }else{
+            Plano_horasVh planovh = new Plano_horasVh();
+            plano = planovh.getEntidade(request);
+        }
+        
+        client.setPlano((Plano)plano);
+        
+        //add veiculo to client
         
         client.setNome(request.getParameter("nome"));
         client.setCpf(request.getParameter("cpf"));
         client.setEmail(request.getParameter("email"));
-        client.setDate_nasc(Date.valueOf(request.getParameter("date")));
+        if(request.getParameter("date") != null){
+            client.setDate_nasc(Date.valueOf(request.getParameter("date")));
+        }
         client.setSexo(request.getParameter("sexo"));
         client.setTel(request.getParameter("tel"));
         client.setCel(request.getParameter("cel"));
@@ -45,7 +74,6 @@ public class ClientVh implements IVh{
         else{
             client.setId(null);
         }
-        
         
         return client;
     }

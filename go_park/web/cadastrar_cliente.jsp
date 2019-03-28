@@ -92,6 +92,21 @@
                     </div>
                     
                 </fieldset>
+                <fieldset>
+                    <legend>Veículo</legend>
+                    <div>
+                        <label for="placa">Placa:</label>
+                        <input type="text" name="placa">
+                    </div>
+                    <div>
+                        <label for="marca">Marca:</label>
+                        <input type="text" name="marca">
+                    </div>
+                    <div>
+                        <label for="modelo">Modelo:</label>
+                        <input type="text" name="modelo">
+                    </div>
+                </fieldset>
             </form> 
             <button type="submit" form="form_cadastro" value="Submit">Cadastrar</button>
         </div>

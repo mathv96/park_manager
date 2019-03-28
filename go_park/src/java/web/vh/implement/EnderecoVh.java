@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.app.implement.Resultado;
 import model.dominio.EntidadeDominio;
+import model.dominio.implement.Cidade;
 import model.dominio.implement.Endereco;
 import web.vh.IVh;
 
@@ -33,6 +34,22 @@ public class EnderecoVh implements IVh{
         endereco.setComplemento(request.getParameter("complemento"));
         endereco.setReferencia(request.getParameter("referencia"));
         
+        return endereco;
+    }
+    
+    public EntidadeDominio getEntidade(HttpServletRequest request, Cidade cidade) {
+
+        Endereco endereco = new Endereco();
+
+        endereco.setNome(request.getParameter("nome_endereco"));
+        endereco.setRua(request.getParameter("rua"));
+        endereco.setBairro(request.getParameter("bairro"));
+        endereco.setCep(request.getParameter("cep"));
+        endereco.setNumero_casa(Integer.parseInt(request.getParameter("numero_casa")));
+        endereco.setComplemento(request.getParameter("complemento"));
+        endereco.setReferencia(request.getParameter("referencia"));
+        endereco.setCidade(cidade);
+
         return endereco;
     }
 
