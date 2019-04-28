@@ -70,12 +70,18 @@
                         <input type="text" name="bairro">
                     </div>
                     <div>
-                        <label for="bairro">Cidade</label>
-                        <select>
-                            <option value="mogi">Mogi das Cruzes</option>
-                            <option value="suzano">Suzano</option>
-                            <option value="biritiba">Biritiba Mirim</option>
-                            <option value="guararema">Guararema</option>
+                        <label for="cidade">Cidade</label>
+                        <select name="id_cidade">
+                            <option value="1">Mogi das Cruzes</option>
+                            <option value="2">Suzano</option>
+                            <option value="3">Biritiba Mirim</option>
+                            <option value="4">Guararema</option>
+                        </select> 
+                    </div>
+                    <div>
+                        <label for="estado">Estado</label>
+                        <select name="id_estado">
+                            <option value="1">São Paulo</option>
                         </select> 
                     </div>
                     <div>
@@ -100,11 +106,19 @@
                     </div>
                     <div>
                         <label for="marca">Marca:</label>
-                        <input type="text" name="marca">
+                        <select name="id_marca">
+                            <option value="1">Renault</option>
+                            <option value="2">Chevrolet</option>
+                            <option value="3">Volkswagen</option>
+                        </select> 
                     </div>
                     <div>
                         <label for="modelo">Modelo:</label>
-                        <input type="text" name="modelo">
+                        <select name="id_modelo">
+                            <option value="1">Celta</option>
+                            <option value="2">Gol</option>
+                            <option value="3">Sandero</option>
+                        </select>
                     </div>
                 </fieldset>
             </form> 

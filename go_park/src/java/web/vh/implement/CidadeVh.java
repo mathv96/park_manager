@@ -6,6 +6,8 @@
 package web.vh.implement;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,12 +23,21 @@ import web.vh.IVh;
  */
 public class CidadeVh implements IVh{
 
+    private static Map<String, String> nomes_cidades;
+    
     @Override
     public EntidadeDominio getEntidade(HttpServletRequest request) {
         Cidade cidade = new Cidade();
         
+        //simulando uma consulda dos nomes dos estados
+        nomes_cidades = new HashMap<>();
+        nomes_cidades.put("1", "Mogi das Cruzes");
+        nomes_cidades.put("2", "Suzano");
+        nomes_cidades.put("3", "Biritiba Mirim");
+        nomes_cidades.put("4", "Guararema");
+        
         cidade.setId(Integer.parseInt(request.getParameter("id_cidade")));
-        cidade.setNome(request.getParameter("nome_cidade"));
+        cidade.setNome(nomes_cidades.get(request.getParameter("id_cidade")));
         
         return cidade;
     }
